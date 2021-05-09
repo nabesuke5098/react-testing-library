@@ -48,7 +48,7 @@ export const customCounterSlice = createSlice({
     incrementByAmount: (state, action) => {
       switch (state.mode) {
         case 0:
-          state.value += 1 * action.payload;
+          state.value += action.payload;
           break;
         case 1:
           state.value += 100 * action.payload;
@@ -68,7 +68,7 @@ export const customCounterSlice = createSlice({
     builder.addCase(fetchDummy.rejected, (state, action) => {
       state.value = 100 - action.payload;
     });
-    builder.addCase(fetchJSON.fulfillled, (state, action) => {
+    builder.addCase(fetchJSON.fulfilled, (state, action) => {
       state.username = action.payload;
     });
   },

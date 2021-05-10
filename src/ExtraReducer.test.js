@@ -13,4 +13,9 @@ describe("extraReducers", () => {
     const state = reducer(initialState, action);
     expect(state.value).toEqual(105);
   });
+  it("Should output 100 - payload when rejecteded", () => {
+    const action = { type: fetchDummy.rejected.type, payload: 5 };
+    const state = reducer(initialState, action);
+    expect(state.value).toEqual(95);
+  });
 });

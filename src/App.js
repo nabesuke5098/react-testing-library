@@ -7,6 +7,7 @@ import FrameworkList from "./FrameworkList";
 import MockServer from "./MockServer";
 import Redux from "./Redux";
 import ReduxAsync from "./ReduxAsync";
+import CusotmHooks from "./CusotmHooks";
 
 function App() {
   const output = (text) => {
@@ -36,6 +37,7 @@ function App() {
         <MockServer />
         <Redux />
         <ReduxAsync />
+        <CusotmHooks />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
